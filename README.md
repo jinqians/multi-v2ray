@@ -63,17 +63,17 @@ V2ray/Xray多用户管理脚本，向导式管理[新增|删除|修改]传输协
 
 ## 安装命令
 ```
-curl -sSL https://raw.githubusercontent.com/jinqians/multi-v2ray/refs/heads/master/v2ray.sh --zh
+curl -O https://raw.githubusercontent.com/jinqians/multi-v2ray/refs/heads/master/v2ray.sh && chmod +x v2ray.sh && ./v2ray.sh --zh
 ```
 
 ## 升级命令(保留配置文件更新)
 ```
-curl -sSL https://raw.githubusercontent.com/jinqians/multi-v2ray/refs/heads/master/v2ray.sh -k
+./v2ray.sh -k
 ```
 
 ## 卸载命令
 ```
-curl -sSL https://raw.githubusercontent.com/jinqians/multi-v2ray/refs/heads/master/v2ray.sh --remove
+./v2ray.sh --remove
 ```
 
 ## 命令行参数
