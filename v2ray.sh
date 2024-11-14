@@ -68,6 +68,20 @@ while [[ $# > 0 ]];do
 done
 #############################
 
+# 检测python3相关路径
+file_path="/usr/lib/python3.11/EXTERNALLY-MANAGED"
+
+# 检查文件是否存在
+if [ -f "$file_path" ]; then
+    # 如果文件存在，则重命名
+    mv "$file_path" "$file_path.bak"
+    echo "已将 $file_path 重命名为 $file_path.bak"
+else
+    # 如果文件不存在，则跳过
+    echo "$file_path 不存在，跳过重命名"
+fi
+
+
 help(){
     echo "bash v2ray.sh [-h|--help] [-k|--keep] [--remove]"
     echo "  -h, --help           Show help"
