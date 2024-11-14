@@ -249,7 +249,7 @@ EOF
     fi
     
     #安装V2ray主程序
-    [[ ${install_way} == 0 ]] && bash <(curl -L -s https://multi.netlify.app/go.sh)
+    [[ ${install_way} == 0 ]] && bash <(curl -L -s https://raw.githubusercontent.com/jinqians/multi-v2ray/refs/heads/master/go.sh)
 }
 
 #时间同步
