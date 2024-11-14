@@ -43,7 +43,12 @@ colorEcho(){
 }
 
 #######get params#########
-while [[ $# > 0 ]];do
+#!/bin/bash
+
+# 默认安装中文版
+chinese=1
+
+while [[ $# > 0 ]]; do
     key="$1"
     case $key in
         --remove)
@@ -61,11 +66,17 @@ while [[ $# > 0 ]];do
         colorEcho ${blue} "安装中文版..\n"
         ;;
         *)
-                # unknown option
+        # unknown option
         ;;
     esac
     shift # past argument or value
 done
+
+# 如果没有传递 --zh 参数，且chinese默认是1，输出中文提示
+if [[ $chinese -eq 1 ]]; then
+    colorEcho ${blue} "默认安装中文版..\n"
+fi
+
 #############################
 
 # 检测python3相关路径
